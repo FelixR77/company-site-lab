@@ -2,6 +2,8 @@ const express = require('express');
 
 const app = express();
 
+app.use(express.static('public'));
+
 const staff = [
   { name: "Ava Martinez", position: "Manager", tenure: 5 },
   { name: "Leo Thompson", position: "Sales Associate", tenure: 2 },
@@ -106,6 +108,7 @@ const suppliers = [
 app.listen(3000, () => {
     console.log('Listening on port 3000')
 })
+
 
 app.get('/', (req, res) => {
     res.render('home.ejs', {})
