@@ -4,21 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/public/style.css"> 
+    <link rel="stylesheet" href="/style.css"> 
 </head>
 <body>
     <header>
     <%- include('./partials/nav') %>
     </header>
-      <% catalog.forEach((product) => { %>
-        <a href= <%= `./catalog/${product.sku}` %>>
-            <div class="product">
-                <!-- <img ==> -->
-                <p><%= product.name %></p>
-                <p><%= product.price %></p>
-            </div>
-        </a>
-    <%  }); %>
 
+    <table class="table">
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+        </tr>
+
+      <% catalog.forEach((product) => { %>
+        <tr>
+        <td>
+        <a href= <%= `./catalog/${product.sku}` %>>
+                <p><%= product.name %></p>
+            
+        </a>
+        </td>
+        <td>
+        <a href= <%= `./catalog/${product.sku}` %>>
+                <p><%= product.price %></p>
+        </a>
+        </td>
+        </tr>
+    <%  }); %>
+    </table>
 </body>
 </html>

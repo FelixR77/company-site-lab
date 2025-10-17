@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/public/style.css"> 
+    <link rel="stylesheet" href="/style.css"> 
 </head>
 <body>
     <header>
         <%- include('./partials/nav')  %>
     </header>
+    <div class="product-header">
     <h1><%= item.name %></h1>
+    <img src= <%= item.img  %>>
+    </div>
 </body>
 </html>
