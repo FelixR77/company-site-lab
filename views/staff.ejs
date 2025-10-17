@@ -10,12 +10,16 @@
     <%- include('./partials/nav') %>
     </header>
     
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-    
+    <% staff.forEach((member,index) => { %>
+        <a href= <%= `./staff/${index}` %>>
+            <div class="staff-member">
+                <!-- <img ==> -->
+                <p><%= member.name %></p>
+                <p><%= member.position %></p>
+            </div>
+        </a>
+    <%  }); %>
+        
     
 </body>
 </html>

@@ -9,11 +9,15 @@
     <header>
     <%- include('./partials/nav') %>
     </header>
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-    
+      <% catalog.forEach((product) => { %>
+        <a href= <%= `./catalog/${product.sku}` %>>
+            <div class="product">
+                <!-- <img ==> -->
+                <p><%= product.name %></p>
+                <p><%= product.price %></p>
+            </div>
+        </a>
+    <%  }); %>
+
 </body>
 </html>

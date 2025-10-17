@@ -8,5 +8,16 @@
 <body>
     <%- include('./partials/nav') %>
     <%= suppliers[0].name %>
+    <% suppliers.forEach((supplier) => { %>
+        <a href= <%=supplier.website%> target="_blank">
+            <div class="suppliers">
+                <!-- <img ==> -->
+                <p><%= supplier.name %></p>
+                <p><%= supplier.location %></p>
+            </div>
+        </a>
+    <%  }); %>
+        
+    
 </body>
 </html>

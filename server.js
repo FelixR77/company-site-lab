@@ -129,7 +129,7 @@ app.get('/staff/:index', (req, res) => {
 })
 // ^ using the index
 app.get('/staff', (req, res) => {
-    res.render('staff.ejs', {})
+    res.render('staff.ejs', {staff: staff})
 })
 
 app.get('/contact-us', (req, res) => {
